@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Styling for fromt-end attack!! -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>SQL Injection Attack! Do not submit!!!</title>
+    </head>
+
+    <body>
+        <!-- Login form -->
+        <form action="/login" method="post">
+
+            <!-- Wrap input fields and button im container -->
+            <div class="container">
+                <!-- Input for username -->
+                <label>Username (Do not enter! This is a scam!!)</label>
+                <input type="text" placeholder="Enter Username" name="username" required />
+                <!-- Input for password -->
+                <label>Password (See above! Way to respect your identity!!!)</label>
+                <input type="password" placeholder="Enter Password" name="password" required />
+                <!-- Submit button -->
+                <button type="submit">Login</button>
+            </div>
+
+            <!-- Script to alert to invaid login -->
+            <script>
+                if(document.location.hash === "#unauthorized") {
+                    document.write("<div class='unauthorized'>Invalid Username or Password!!</div>");
+                } else if(document.location.hash === "#error") {
+                    document.write("<div class='error'>An error has occured. I told you this would happen!!!</div>");
+                }
+            </script>
+
+        </form>
+
+    </body>
+
+</html>
