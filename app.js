@@ -9,6 +9,7 @@ app.use(express.static("."));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+
 // Create sqlite mock database:
 const db = new sqlite3.Database(':memory:');
 db.serialize(function () {
@@ -49,4 +50,5 @@ app.post("/login", function (req, res) {
   });
 });
 
+// Listen on port 3000:
 app.listen(3000);
